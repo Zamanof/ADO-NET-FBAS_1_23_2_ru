@@ -66,5 +66,5 @@ string connectionString = @"Server=(localdb)\MSSQLLocalDB;Database=Library;Integ
 //        Console.WriteLine();
 //    }
 //}
-Console.WriteLine(1 + "1" + 2);
+
 #endregion
