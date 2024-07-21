@@ -1,12 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿namespace ADO_07._Annotations;
 
-namespace ADO_07._Annotations
+internal class Group
 {
-    internal class Group
-    {
-    }
+    public int Id { get; set; }
+    public string GroupName { get; set; }
+    public int GroupRating {  get; set; }
+    public int CourseYear { get; set; }
 }

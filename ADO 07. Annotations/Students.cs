@@ -1,12 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿namespace ADO_07._Annotations;
 
-namespace ADO_07._Annotations
+internal class Students
 {
-    internal class Students
-    {
-    }
+    public int Id { get; set; }
+    public string FirstName { get; set; }
+    public string LastName { get; set; }
+
+
 }
