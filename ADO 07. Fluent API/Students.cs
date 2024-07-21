@@ -1,6 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations.Schema;
 
-namespace ADO_07._Annotations;
+namespace ADO_07._Fluent_API;
+
 
 internal class Student
 {
@@ -8,7 +9,6 @@ internal class Student
     public string FirstName { get; set; }
     public string LastName { get; set; }
 
-    [ForeignKey("Group")]
     public int GroupId {  get; set; }
     public Group Group { get; set; } // navigation property
 }

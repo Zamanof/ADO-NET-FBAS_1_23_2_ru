@@ -1,15 +1,17 @@
-﻿using ADO_07._Annotations;
-// Entity Models. Annotations
+﻿// Entity Models. Annotations
+
+using ADO_07._Fluent_API;
 
 using ApplicationContext db = new();
-Student student = new Student() { 
-FirstName = "Ali",
-LastName = "Aliyev"
+Student student = new Student()
+{
+    FirstName = "Ali",
+    LastName = "Aliyev"
 };
 //db.Students.Add(student);
 Group group = new()
 {
-    GroupName = "FBAS_1_23_2_ru",
+    GroupName = "1_23_2_ru",
     GroupRating = 10,
     CourseYear = 3,
     Students = new List<Student>()
