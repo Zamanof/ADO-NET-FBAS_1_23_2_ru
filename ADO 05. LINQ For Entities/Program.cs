@@ -77,10 +77,53 @@ using LibraryContext db = new LibraryContext();
 #endregion
 
 #region Join
-var books = db.Books.Join(db.Authors, b => b.IdAuthor, a => a.Id, (b, a) => new
-{
-    Name = b.Name,
-    Author = a.LastName + " " + a.FirstName
-}).ToList();
-books.ForEach(b=> Console.WriteLine($"BookName: {b.Name}\nAuthor: {b.Author}\n"));
+//var books = db.Books.Join(db.Authors, b => b.IdAuthor, a => a.Id, (b, a) => new
+//{
+//    Name = b.Name,
+//    Author = a.LastName + " " + a.FirstName
+//}).ToList();
+///*
+//SELECT B.[Name], A.FirstName + ' ' + A.LastName As Author
+//FROM Books AS B
+//JOIN Authors AS A
+//ON B.Id_Author = A.Id 
+// */
+//books.ForEach(b=> Console.WriteLine($"BookName: {b.Name}\nAuthor: {b.Author}\n"));
 #endregion
+
+
+/*
+LINQ For Entities
+
+All
+Any
+Average
+Contains
+Count
+First
+FirstOrDefault
+Single
+SingleOrDefault
+Select
+Where
+OrderBy
+OrderByDescending
+ThenBy
+ThenByDescending
+Join
+LeftJoin
+GroupBy
+Except
+Union
+Intersect
+Sum
+Max
+Min
+Take
+TakeWhile
+TakeLast
+Skip
+SkipWhile
+SkipLast
+ToList
+*/
