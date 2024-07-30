@@ -75,27 +75,27 @@ IDbConnection db = new SqlConnection(@"Server=(localdb)\MSSQLLocalDB;Initial Cat
 #endregion
 
 #region ManyToMany
-IDbConnection db1 = new SqlConnection(@"Server=(localdb)\MSSQLLocalDB;
-Database=ManyToMany; 
-Integrated Security=SSPI");
-var sql =
-    @"SELECT * 
-FROM SocialNetworks AS SN
-JOIN SocialNetworkUser AS SNU ON SN.Id=SNU.SocialNetworksId  
-JOIN Users AS U ON U.Id = SNU.UsersId";
-var results = db1.Query<SocialNetwork, User, SocialNetwork>(sql, (s, u) =>
-{
-    s.Users.Add(u);
-    return s;
-});
-foreach (var sn in results)
-{
-    Console.WriteLine(sn.Name);
-    foreach (var user in sn.Users)
-    {
-        Console.WriteLine($"    {user}");
-    }
-}
+//IDbConnection db1 = new SqlConnection(@"Server=(localdb)\MSSQLLocalDB;
+//Database=ManyToMany; 
+//Integrated Security=SSPI");
+//var sql =
+//    @"SELECT * 
+//FROM SocialNetworks AS SN
+//JOIN SocialNetworkUser AS SNU ON SN.Id=SNU.SocialNetworksId  
+//JOIN Users AS U ON U.Id = SNU.UsersId";
+//var results = db1.Query<SocialNetwork, User, SocialNetwork>(sql, (s, u) =>
+//{
+//    s.Users.Add(u);
+//    return s;
+//});
+//foreach (var sn in results)
+//{
+//    Console.WriteLine(sn.Name);
+//    foreach (var user in sn.Users)
+//    {
+//        Console.WriteLine($"    {user}");
+//    }
+//}
 #endregion
 
 
